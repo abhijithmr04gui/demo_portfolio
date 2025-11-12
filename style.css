@@ -1,0 +1,129 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Styles */
+.hero {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    padding: 50px;
+    margin: 40px 0;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.hero h1 {
+    color: #3366cc;
+    font-size: 3em;
+    margin-bottom: 20px;
+    background: linear-gradient(45deg, #3366cc, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* Feature Cards */
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin: 50px 0;
+}
+
+.feature-card {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-card h3 {
+    color: #3366cc;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
+
+.feature-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    background: linear-gradient(45deg, #3366cc, #764ba2);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 30px;
+    color: white;
+    margin-top: 50px;
+}
+
+.success-badge {
+    background: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    display: inline-block;
+    margin: 20px 0;
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2em;
+    }
+    
+    .hero {
+        padding: 30px 20px;
+    }
+    
+    .features {
+        grid-template-columns: 1fr;
+    }
+}
